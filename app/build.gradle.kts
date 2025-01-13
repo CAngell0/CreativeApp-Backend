@@ -42,6 +42,14 @@ application {
     mainClass = "mcobserver.backend.MCObserver"
 }
 
+sourceSets {
+   main {
+      resources {
+         srcDirs("src/main/resources")
+      }
+   }
+}
+
 tasks {
     named<ShadowJar>("shadowJar") {
         archiveFileName.set("MCObserver.jar")

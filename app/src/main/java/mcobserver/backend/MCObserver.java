@@ -4,6 +4,9 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import mcobserver.backend.webserver.Webserver;
 
+import mcobserver.backend.util.InfoPacketBuilder;
+import mcobserver.backend.model.InfoPacket;
+
 public class MCObserver extends JavaPlugin {
 
    public Webserver webserver;
@@ -26,6 +29,8 @@ public class MCObserver extends JavaPlugin {
 
    @Override
    public void onDisable() {
+      InfoPacket packet = InfoPacketBuilder.buildPacket("Groupies", this.getServer());
+      getLogger().info(packet.toString());
       this.getLogger().info("Disabled!");
    }
 }
