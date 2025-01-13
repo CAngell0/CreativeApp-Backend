@@ -1,0 +1,7 @@
+name: MCObserver
+version: 1.0.0
+main: mcobserver.backend.MCObserver
+description: An example plugin
+author: Umbra100
+website: ''
+api-version: '1.21.1'
